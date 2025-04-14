@@ -1,26 +1,11 @@
-import ListGroup from "./components/ListGroup";
+import { Alert } from "./components/Alert";
 
 function App() {
-  let items = [
-    "New York",
-    "San Francisco",
-    "Los Angeles",
-    "Seattle",
-    "Chicago",
-    "Boston",
-  ];
-
-  const handleSelectedItem = (item: string) => {
-    console.log(item);
-  };
-
   return (
-    <div>
-      <ListGroup
-        items={items}
-        header="Cities"
-        onSelectedItem={handleSelectedItem}
-      />
+    <div className="alert alert-primary">
+      <Alert>
+        Hello World <span style={{ color: "Blue" }}>Johnny</span>
+      </Alert>
     </div>
   );
 }
