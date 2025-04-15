@@ -1,13 +1,13 @@
+import { useState } from "react";
 import { Alert } from "./components/Alert";
 import Button from "./components/Button";
 
 function App() {
+  const [show, setShow] = useState(false);
   return (
-    <div className="alert alert-primary">
-      <Alert>
-        Hello World <span style={{ color: "Blue" }}>Johnny</span>
-      </Alert>
-      <Button color="danger" onClickHandler={() => console.log("Hello World")}>
+    <div>
+      {show && <Alert onClose={() => setShow(false)}>Johnny</Alert>}
+      <Button color="danger" onClickHandler={() => setShow(true)}>
         Hello
       </Button>
     </div>
